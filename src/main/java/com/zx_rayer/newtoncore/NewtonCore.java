@@ -1,5 +1,6 @@
 package com.zx_rayer.newtoncore;
 
+import com.zx_rayer.newtoncore.modlib.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -73,6 +74,13 @@ public class NewtonCore {
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
+
+
+        /*
+
+        这里是所有外部文件接入点
+         */
+        ModItems.listener(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
