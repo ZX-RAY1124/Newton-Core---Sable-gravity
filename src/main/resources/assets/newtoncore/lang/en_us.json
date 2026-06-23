@@ -1,0 +1,13 @@
+{
+  "itemGroup.newtoncore": "Example Mod Tab",
+  "block.newtoncore.example_block": "Example Block",
+  "item.newtoncore.example_item": "Example Item",
+
+  "newtoncore.configuration.title": "Newton Core Configs",
+  "newtoncore.configuration.section.newtoncore.common.toml": "Newton Core Configs",
+  "newtoncore.configuration.section.newtoncore.common.toml.title": "Newton Core Configs",
+  "newtoncore.configuration.items": "Item List",
+  "newtoncore.configuration.logDirtBlock": "Log Dirt Block",
+  "newtoncore.configuration.magicNumberIntroduction": "Magic Number Text",
+  "newtoncore.configuration.magicNumber": "Magic Number"
+}
