@@ -1,5 +1,7 @@
 package com.zx_rayer.newtoncore;
 
+import com.zx_rayer.newtoncore.modlib.ModBlocks;
+import com.zx_rayer.newtoncore.modlib.ModCreativeTab;
 import com.zx_rayer.newtoncore.modlib.ModItems;
 import org.slf4j.Logger;
 

@@ -1,7 +1,8 @@
 {
-  "itemGroup.newtoncore": "Example Mod Tab",
+  "itemGroup.newtoncore": "Newton core",
   "block.newtoncore.example_block": "Example Block",
   "item.newtoncore.example_item": "Example Item",
+  "item.newtoncore.gravity_core": "Gravity Core",
 
   "newtoncore.configuration.title": "Newton Core Configs",
   "newtoncore.configuration.section.newtoncore.common.toml": "Newton Core Configs",
