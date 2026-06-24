@@ -12,8 +12,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-// An example config class. This is not required, but it's a good idea to have one to keep your config organized.
-// Demonstrates how to use Neo's config APIs
+// 一个示例配置类。这不是必需的，但有一个配置类有助于保持配置的组织性。
+// 演示如何使用 Neo 的配置 API
 public class Config {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
@@ -29,7 +29,7 @@ public class Config {
             .comment("What you want the introduction message to be for the magic number")
             .define("magicNumberIntroduction", "The magic number is... ");
 
-    // a list of strings that are treated as resource locations for items
+    // 一个字符串列表，这些字符串被视为物品的资源位置
     public static final ModConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
             .comment("A list of items to log on common setup.")
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), () -> "", Config::validateItemName);

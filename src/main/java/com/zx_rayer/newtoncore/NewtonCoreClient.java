@@ -10,21 +10,21 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-// This class will not load on dedicated servers. Accessing client side code from here is safe.
+// 此类不会在专用服务器上加载。从这里访问客户端代码是安全的。
 @Mod(value = NewtonCore.MODID, dist = Dist.CLIENT)
-// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+// 你可以使用 EventBusSubscriber 来自动注册类中所有带有 @SubscribeEvent 注解的静态方法
 @EventBusSubscriber(modid = NewtonCore.MODID, value = Dist.CLIENT)
 public class NewtonCoreClient {
     public NewtonCoreClient(ModContainer container) {
-        // Allows NeoForge to create a config screen for this mod's configs.
-        // The config screen is accessed by going to the Mods screen > clicking on your mod > clicking on config.
-        // Do not forget to add translations for your config options to the en_us.json file.
+        // 允许 NeoForge 为此 mod 的配置创建一个配置界面。
+        // 配置界面的访问路径：进入 Mods 界面 > 点击你的 mod > 点击 config。
+        // 不要忘记在 en_us.json 文件中为你的配置选项添加翻译。
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
-        // Some client setup code
+        // 一些客户端设置代码
         NewtonCore.LOGGER.info("HELLO FROM CLIENT SETUP");
         NewtonCore.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
