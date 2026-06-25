@@ -1,11 +1,10 @@
 package com.zx_rayer.newtoncore;
 
-import com.zx_rayer.newtoncore.modlib.ModBlocks;
-import com.zx_rayer.newtoncore.modlib.ModCreativeTab;
-import com.zx_rayer.newtoncore.modlib.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
+import com.zx_rayer.newtoncore.modlib.ModAttachments;
+import com.zx_rayer.newtoncore.modlib.ModItems;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -19,12 +18,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -83,6 +81,7 @@ public class NewtonCore {
         这里是所有外部文件接入点
          */
         ModItems.listener(modEventBus);
+        ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         // 将 Deferred Register 注册到 mod 事件总线，以便标签页被注册
         CREATIVE_MODE_TABS.register(modEventBus);
 
